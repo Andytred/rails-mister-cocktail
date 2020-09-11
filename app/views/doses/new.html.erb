@@ -1,0 +1,17 @@
+<h1>Adding dose</h1>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+ 
+<% end %>
+
+<%= link_to 'Back to all cocktails', cocktails_path %>
+
+<%# <div class="card-tags">
+    <% @dose.cocktail_id.each do |dose| %>
+        <%# <span><%= link_to cocktail_doses.x.description, cocktail_doses_path(x), method: :delete %></span>
+    <%# <% end %> 
+<%# </div> %>

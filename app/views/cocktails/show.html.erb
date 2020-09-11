@@ -1,0 +1,14 @@
+
+<p>
+  <strong>Name of the coctail:</strong>
+  <%= @cocktail.name %>
+  <% @cocktail.doses.each do |dose| %>
+    <%= dose.description %>
+    <%= link_to "Delete", dose_path(dose.id), method: :delete, class: 'btn btn-primary' %>
+  <% end %>
+</p>
+
+
+
+<%= link_to "Go back", cocktails_path, class: 'btn btn-primary' %>
+
