@@ -2,10 +2,20 @@
 <p>
   <strong>Name of the coctail:</strong>
   <%= @cocktail.name %>
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.description %>
-    <%= link_to "Delete", dose_path(dose.id), method: :delete, class: 'btn btn-primary' %>
-  <% end %>
+  
+
+    
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to "Delete", dose_path(dose.id), method: :delete, class: 'btn btn-primary' %>
+      </li>
+    <% end %>
+  </ul>
+  
+  
 </p>
 
 

@@ -21,12 +21,17 @@
     </thead>
     <tbody>
       <% @cocktails.each do |cocktail| %>
-        <tr>
+        <tr class="card">
           <td><%= link_to cocktail.name, cocktail_path(cocktail.id) %></td>
           <td><%= link_to 'Add dose', new_cocktail_dose_path(cocktail) %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <div class="btn btn-secondary btn-lg btn-block">
   <%= link_to 'Create new cocktail', new_cocktail_path %>
+  </div>
+  
+  
+  
 </div>
